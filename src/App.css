@@ -1,0 +1,29 @@
+:root {
+  color-scheme: light dark;
+}
+
+input{
+  padding: 10px;
+  margin:10px 0;
+  border:0;
+  box-sizing: border-box;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.form{
+  height:100%;
+  width: 400px;
+	flex: 1 1 auto;
+	margin:0 auto;
+	display:block;
+  text-align: center;
+}
+
+.form input, .form button{
+  display:block;
+  width: 100%
+}
+
+span{
+  font-size: x-large;
+}
