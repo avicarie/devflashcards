@@ -65,15 +65,18 @@ function fillCodeResults(code, { functionName, testCases }) {
         return (
 
             <table>
-                <tr>
-                    <th>PARAMS</th>
-                    <th>EXPECTED</th>
-                    <th>YOURS</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>PARAMS</th>
+                        <th>EXPECTED</th>
+                        <th>YOURS</th>
+                    </tr>
+                </thead>
+                <tbody>
                 {testCases.map(testCase => {
                     const valid = ${functionName}(...testCase.params) == testCase.expected;
                     return (
-                        <tr style={{backgroundColor: valid ? 'green' : 'red'}}>
+                        <tr key={testCase.expected} style={{backgroundColor: valid ? 'green' : 'red'}}>
                             <td>{JSON.stringify(testCase.params)} </td>
                             <td style={{textAlign: 'right'}}>{testCase.expected}</td>
                             <td style={{textAlign: 'right'}}>{${functionName}(...testCase.params)}</td>
@@ -81,6 +84,7 @@ function fillCodeResults(code, { functionName, testCases }) {
                         </tr>
                     )
                 })}
+                </tbody>
             </table>
         );
     }
