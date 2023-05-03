@@ -1,7 +1,9 @@
 {
     "scripts": {
-        "dev": "parcel src/index.html"
+        "dev": "parcel src/index.html",
+        "build": "parcel build"
     },
+    "source": "src/index.html",
     "dependencies": {
         "@babel/standalone": "^7.21.8",
         "@monaco-editor/react": "^4.5.0",
