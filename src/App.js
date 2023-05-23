@@ -141,10 +141,10 @@ function fillCodeResults(code, { functionName, testCases }) {
                     </tr>
                 </thead>
                 <tbody>
-                {testCases.map(testCase => {
+                {testCases.map((testCase, index) => {
                     const valid = ${functionName}(...testCase.params) == testCase.expected;
                     return (
-                        <tr key={testCase.expected} style={{backgroundColor: valid ? 'green' : 'red'}}>
+                        <tr key={index} style={{backgroundColor: valid ? 'green' : 'red'}}>
                             <td>{JSON.stringify(testCase.params)} </td>
                             <td style={{textAlign: 'right'}}>{testCase.expected.toString()}</td>
                             <td style={{textAlign: 'right'}}>{${functionName}(...testCase.params).toString()}</td>
