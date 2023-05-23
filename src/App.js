@@ -18,6 +18,14 @@ function App() {
         return a * factorial(a - 1);
     }
 
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max + 1);
+    }
+
+    function evenOrOdd(a) {
+        return a % 2 == 0 ? 'Even' : 'Odd';
+    }
+
     function fibbonaci(a) {
         if (a == 0) return 0;
         if (a == 1) return 1;
@@ -31,6 +39,10 @@ function App() {
         return false;
     }
 
+    const firstRandom = getRandomInt(15);
+    const secondRandom = getRandomInt(15);
+    const thirdRandom = getRandomInt(4000);
+    const fourthRandom = getRandomInt(4000);
     const tasks = [
         {
             initialCode: 'function sumTwoNumbers(a,b){\n\treturn 0;\n}',
@@ -41,6 +53,8 @@ function App() {
                 { params: [4, 5], expected: 9 },
                 { params: [-10, 30], expected: 20 },
                 { params: [12, 309000], expected: 309012 },
+                { params: [thirdRandom, fourthRandom], expected: thirdRandom + fourthRandom },
+                { params: [firstRandom, secondRandom], expected: firstRandom + secondRandom },
             ],
         },
         {
@@ -52,6 +66,8 @@ function App() {
                 { params: [11], expected: 'Odd' },
                 { params: [16], expected: 'Even' },
                 { params: [27], expected: 'Odd' },
+                { params: [firstRandom], expected: evenOrOdd(firstRandom) },
+                { params: [fourthRandom], expected: evenOrOdd(fourthRandom) },
             ],
         },
         {
@@ -63,6 +79,8 @@ function App() {
                 { params: [7], expected: factorial(7) },
                 { params: [4], expected: factorial(4) },
                 { params: [5], expected: factorial(5) },
+                { params: [firstRandom], expected: factorial(firstRandom) },
+                { params: [secondRandom], expected: factorial(secondRandom) },
             ],
         },
         {
@@ -74,6 +92,8 @@ function App() {
                 { params: [7], expected: fibbonaci(7) },
                 { params: [11], expected: fibbonaci(11) },
                 { params: [5], expected: fibbonaci(5) },
+                { params: [firstRandom], expected: fibbonaci(firstRandom) },
+                { params: [secondRandom], expected: fibbonaci(secondRandom) },
             ],
         },
         {
@@ -85,6 +105,8 @@ function App() {
                 { params: [2004], expected: leapYearChecker(2004) },
                 { params: [2000], expected: leapYearChecker(2000) },
                 { params: [1900], expected: leapYearChecker(1900) },
+                { params: [thirdRandom], expected: leapYearChecker(thirdRandom) },
+                { params: [fourthRandom], expected: leapYearChecker(fourthRandom) },
             ],
         },
     ];
