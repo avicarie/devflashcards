@@ -18,6 +18,9 @@ function getSrcDoc({ babelOutput, error, css }) {
     return `<html lang="en">
   <head>
       <meta charset="utf-8">
+      <style>
+        ${css}
+      </style>
   </head>
 
   <body>
