@@ -26,10 +26,10 @@ function App() {
         return a % 2 == 0 ? 'Even' : 'Odd';
     }
 
-    function fibbonaci(a) {
+    function fibbonacci(a) {
         if (a == 1) return 0;
         if (a == 2) return 1;
-        return fibbonaci(a - 1) + fibbonaci(a - 2);
+        return fibbonacci(a - 1) + fibbonacci(a - 2);
     }
 
     function leapYearChecker(a) {
@@ -84,16 +84,16 @@ function App() {
             ],
         },
         {
-            initialCode: 'function fibbonaci(a){\n\treturn 0;\n}',
-            functionName: 'fibbonaci',
+            initialCode: 'function fibbonacci(a){\n\treturn 0;\n}',
+            functionName: 'fibbonacci',
             description: `Write a function that takes a number n as input and returns the nth number in the Fibonacci sequence. The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1.`,
             testCases: [
-                { params: [8], expected: fibbonaci(8) },
-                { params: [7], expected: fibbonaci(7) },
-                { params: [11], expected: fibbonaci(11) },
-                { params: [5], expected: fibbonaci(5) },
-                { params: [firstRandom], expected: fibbonaci(firstRandom) },
-                { params: [secondRandom], expected: fibbonaci(secondRandom) },
+                { params: [8], expected: fibbonacci(8) },
+                { params: [7], expected: fibbonacci(7) },
+                { params: [11], expected: fibbonacci(11) },
+                { params: [5], expected: fibbonacci(5) },
+                { params: [firstRandom], expected: fibbonacci(firstRandom) },
+                { params: [secondRandom], expected: fibbonacci(secondRandom) },
             ],
         },
         {
