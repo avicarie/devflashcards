@@ -14,8 +14,11 @@ table, th, td {
 
 function App() {
     function factorial(a) {
-        if (a == 0) return 1;
-        return a * factorial(a - 1);
+        let fac = 1;
+        for (let i = 1; i <= a; i++) {
+            fac = fac * i;
+        }
+        return fac;
     }
 
     function getRandomInt(max) {
